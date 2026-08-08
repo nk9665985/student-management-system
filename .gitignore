@@ -1,0 +1,21 @@
+# Maven build output
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Spring Boot configuration - contains local settings/credentials
+src/main/resources/application.properties
+src/main/resources/application-mysql.properties
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
