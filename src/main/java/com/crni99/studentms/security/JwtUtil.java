@@ -32,9 +32,9 @@ public class JwtUtil {
 		byte[] keyBytes;
 		try {
 			keyBytes = Decoders.BASE64.decode(secret);
-		} catch (IllegalArgumentException e) {
-			keyBytes = secret.getBytes();
-		}
+		   	} catch (RuntimeException e) {
+   			keyBytes = secret.getBytes(java.nio.charset.StandardCharsets.UTF_8);
+   		}
 		return Keys.hmacShaKeyFor(keyBytes.length >= 32 ? keyBytes : pad(keyBytes));
 	}
 
